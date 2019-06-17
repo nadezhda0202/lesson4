@@ -202,11 +202,19 @@ main .serviceTitleItem .serviceP {
   margin-right: 33px;
   text-align: center;
 }
-
-@media screen and (max-width: 1024px) {
-  main .serviceTitleItem .serviceP {
-    text-align: justify;
+@media screen and (max-width: 1077px) {
+  main .serviceTitle {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
   }
+}
+@media screen and (max-width: 767px) {
+  main .serviceTitle{
+  grid-template-columns: 1fr  ;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
 }
 
 main .hLatestWork {
@@ -219,6 +227,11 @@ main .hLatestWork {
   margin-top: 40px;
   margin-bottom: 30px;
   color: #fff;
+}
+@media screen and (max-width: 1200px) {
+  main .hLatestWork{
+    background-image: none;
+  }
 }
 
 main .latestWork {
@@ -264,8 +277,24 @@ main .workText {
   bottom: 0;
   width: 290px;
 }
+@media screen and (max-width: 1077px){
+  main .latestWork {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
 
-footer {
+}
+@media screen and (max-width: 767px){
+  main .latestWork {
+        grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 15px;
+  }
+
+}
+
+.footer {
   padding: 40px 120px 40px 120px;
   background-color: #303030;
   font-family: Georgia, serif;
@@ -411,6 +440,19 @@ a {
   font-weight: bold;
   line-height: 14.4px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1077px){
+   .links{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 767px){
+  .blog{
+    display: none;
+  }
+
 }
 
 .between {
